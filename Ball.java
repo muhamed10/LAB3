@@ -12,11 +12,14 @@ public class Ball extends Ellipse implements Mover {
 	}
 	
 	public void move() {
+		
+		/*
 		int x = this.getXLocation();
 		int y = this.getYLocation();
 		if (x < 650 && y < 450)
 			this.setLocation(x + 5, y + 10);
 		Toolkit.getDefaultToolkit().sync();
+		*/
 	}
 }
 
