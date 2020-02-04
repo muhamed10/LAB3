@@ -4,17 +4,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class MoveTimer extends Timer {
-	private Mover _mover;
+	private Updater _updater;
 	
-	public MoveTimer(int anInterval, Mover aMover) {
+	public MoveTimer(int anInterval, Updater aUpdate) {
 		super(anInterval, null);
-		_mover = aMover;
+		_updater = aUpdate;
 		this.addActionListener(new MoveListener());
 	}
 	
 	private class MoveListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			_mover.move();
+			_updater.Update();
 		}
 	}
 }
