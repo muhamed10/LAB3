@@ -1,5 +1,5 @@
 package LAB3;
-
+import wheels.users.Rectangle;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 

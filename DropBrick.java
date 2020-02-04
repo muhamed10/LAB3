@@ -1,13 +1,13 @@
 package LAB3;
-import wheels.users.Rectangle;
+import java.awt.event.MouseEvent;
 
-public class Brick extends Rectangle {
-	public static final int WIDTH = 50;
-	public static final int HEIGHT = 25;
+public class DropBrick extends Brick {
+
+	public DropBrick(int x, int y) {
+		super(x, y);
+	}
 	
-	public Brick(int x, int y) {
-		this.setColor(java.awt.Color.green);
-		this.setSize(WIDTH, HEIGHT);
-		this.setLocation(x, y);
+	public void mouseClicked(MouseEvent e) {
+		this.setLocation(this.getXLocation(), 400);
 	}
 }
