@@ -6,15 +6,19 @@ import java.util.*;
 
 public class Game extends Frame implements Updater{
 	
-	private final int INTERVAL = 50;
+	private final int INTERVAL = 1;
 	private MoveTimer _timer;
 	private Ball _ball, _2ball;
+	private Bat _bat;
 	public Game()
 	{
 		_ball = new Ball(0,0);
 		_2ball = new Ball(100, 100);
+		
 		_timer = new MoveTimer(INTERVAL, this);
 		_timer.start();
+		
+		_bat = new Bat(300,450);
 	}
 	
 	public static void main(String[] args)

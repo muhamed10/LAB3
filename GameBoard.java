@@ -10,7 +10,7 @@ public class GameBoard extends Frame {
 	private Bat _bat;
 	public GameBoard() {
 		_ball = new Ball(100, 50);
-		_timer = new MoveTimer(INTERVAL, _ball);
+		//_timer = new MoveTimer(INTERVAL, _ball);
 		_timer.start();
 		_brick = new Brick[NUMBRICKS];
 		Random rand = new Random();
@@ -25,8 +25,9 @@ public class GameBoard extends Frame {
 		}
 		_bat = new Bat(300, 450);
 	}
-	
+	/*
 	public static void main(String[] args) {
 		new GameBoard();
 	}
+	*/
 }
