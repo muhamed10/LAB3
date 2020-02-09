@@ -7,7 +7,7 @@ public class GameBoard extends Frame {
 	private final int INTERVAL = 10;
 	private Ball _ball;
 	private MoveTimer _timer;
-	public static final int NUMBRICKS = 10;
+	public static final int NUMBRICKS = 50;
 	private Brick [] _brick;
 	private Bat _bat;
 	public GameBoard() {
