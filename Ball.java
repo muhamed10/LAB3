@@ -16,7 +16,7 @@ public class Ball extends Ellipse implements Mover {
 	
 	public void move() {
 		
-		/*
+		
 		int x = this.getXLocation();
 		int y = this.getYLocation();
 		if (y > 450) {
@@ -33,7 +33,7 @@ public class Ball extends Ellipse implements Mover {
 		
 		this.setLocation(x + xSpeed, y + ySpeed);
 		Toolkit.getDefaultToolkit().sync();
-		*/
+		
 	}
 }
 

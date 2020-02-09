@@ -2,5 +2,5 @@ package LAB3;
 
 public interface Updater {
 
-	public void Update();
+	public void update();
 }
