@@ -9,6 +9,7 @@ public class Game extends Frame implements Updater{
 	private final int INTERVAL = 50;
 	private MoveTimer _timer;
 	private Ball _ball, _2ball;
+	private Brick _brick;
 	public Game()
 	{
 		
@@ -16,6 +17,7 @@ public class Game extends Frame implements Updater{
 		_2ball = new Ball(100, 100);
 		_timer = new MoveTimer(INTERVAL, this);
 		_timer.start();
+		_brick = new Brick(300, 300);
 	}
 
 	public static void main(String[] args)
@@ -27,6 +29,10 @@ public class Game extends Frame implements Updater{
 	{
 		_ball.move();
 		_2ball.move();
+		if (_ball.intersect(_brick))
+		{
+			_ball.xSpeed = -_ball.xSpeed;
+		}
 	}
 
 }

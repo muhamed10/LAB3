@@ -15,10 +15,35 @@ public class Brick extends Rectangle implements Collision {
 		return HEIGHT;
 	}
 	
-	
-	public boolean Intersect(Collision)
+	//Returnerar true ifall den korsar. OBS fungerar enbart för rektanglar 
+	public Direction intersect(Collision other)
 	{
+		if (other.getWidth() + other.getXLocation() < this.getXLocation())
+		{
+			return Direction.None;
+		}
+		else if (this.getXLocation() + this.getWidth() < other.getXLocation())
+		{
+			return Direction.None;
+		}
+		else if (this.getYLocation() + this.getHeight() < other.getYLocation())
+		{
+			return Direction.None;
+		}
+		else if (other.getYLocation() + other.getHeigth() < this.getYLocation())
+		{
+			return Direction.None;
+		}
 		
+		Direction yPot, xPot;
+		
+		if (other.getYLocation() < this.getYLocation())
+		{
+			yPot = Direction.Up;
+			
+		}
+		
+		return true;
 	}
 	
 	
