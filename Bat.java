@@ -5,7 +5,7 @@ import java.awt.Point;
 import java.awt.event.MouseEvent;
 import wheels.users.*;
 
-public class Bat extends Rectangle {
+public class Bat extends Rectangle implements Collision {
 	private Point _lastMousePosition;
 	
 	public Bat(int x, int y) {
@@ -13,6 +13,17 @@ public class Bat extends Rectangle {
 		_lastMousePosition = new Point();
 		this.setSize(75, 15);
 		this.setLocation(x, y);
+		
+	}
+	
+	public int getWidth()
+	{
+		return getSize().width;
+	}
+	
+	public int getHeigth()
+	{
+		return getSize().height;
 	}
 	
 	public void mousePressed(MouseEvent e) {

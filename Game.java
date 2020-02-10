@@ -6,11 +6,11 @@ import java.util.*;
 
 public class Game extends Frame implements Updater{
 
-	private final int INTERVAL = 50;
+	private final int INTERVAL = 20;
 	private MoveTimer _timer;
 	private Ball _ball, _2ball;
 	private Bat _bat;
-	private Brick [][] _brick;
+	//private Brick [][] _brick;
 	private Brick _brick;
 	public Game()
 	
@@ -37,10 +37,32 @@ public class Game extends Frame implements Updater{
 	public void update()
 	{
 		_ball.move();
-		_2ball.move();
-		if (_ball.intersect(_brick))
+		//_2ball.move();
+		Direction d;
+		d = _ball.intersect(_brick);
+		if (d != Direction.None)
 		{
-			_ball.xSpeed = -_ball.xSpeed;
+			if (d == Direction.Left || d == Direction.Right)
+			{
+				_ball.xSpeed = -_ball.xSpeed;
+			}
+			else
+			{
+				_ball.ySpeed = -_ball.ySpeed;
+			}
+		}
+		
+		d = _ball.intersect(_bat);
+		if (d != Direction.None)
+		{
+			if (d == Direction.Left || d == Direction.Right)
+			{
+				_ball.xSpeed = -_ball.xSpeed;
+			}
+			else
+			{
+				_ball.ySpeed = -_ball.ySpeed;
+			}
 		}
 	}
 
