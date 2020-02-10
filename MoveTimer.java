@@ -14,7 +14,7 @@ public class MoveTimer extends Timer {
 	
 	private class MoveListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			_updater.Update();
+			_updater.update();
 		}
 	}
 }

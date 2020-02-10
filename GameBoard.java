@@ -1,8 +1,10 @@
 package LAB3;
 import wheels.users.Frame;
 import java.util.*;
+
+
 public class GameBoard extends Frame {
-	private final int INTERVAL = 50;
+	private final int INTERVAL = 10;
 	private Ball _ball;
 	private MoveTimer _timer;
 	public static final int NUMBRICKS = 50;

@@ -1,7 +1,9 @@
 package LAB3;
+
 import wheels.users.Rectangle;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
+import wheels.users.*;
 
 public class Bat extends Rectangle {
 	private Point _lastMousePosition;

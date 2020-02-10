@@ -5,15 +5,17 @@ import java.util.*;
 
 
 public class Game extends Frame implements Updater{
-	
-	private final int INTERVAL = 1;
+
+	private final int INTERVAL = 50;
 	private MoveTimer _timer;
 	private Ball _ball, _2ball;
 	private Bat _bat;
 	private Brick [][] _brick;
+	private Brick _brick;
 	public Game()
 	
 	{
+		
 		_ball = new Ball(0,0);
 		_2ball = new Ball(100, 100);
 		_timer = new MoveTimer(INTERVAL, this);
@@ -24,17 +26,22 @@ public class Game extends Frame implements Updater{
 				
 			}
 		}
-	}
-	
+		_brick = new Brick(300, 300);
+}
+
 	public static void main(String[] args)
 	{
 		Game game = new Game();
 	}
 
-	public void Update()
+	public void update()
 	{
 		_ball.move();
 		_2ball.move();
+		if (_ball.intersect(_brick))
+		{
+			_ball.xSpeed = -_ball.xSpeed;
+		}
 	}
-	
+
 }
