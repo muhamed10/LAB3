@@ -23,7 +23,7 @@ public class Ball extends Ellipse implements Mover, Collision {
 		return DIAMETER;
 	}
 	//Returnerar true ifall den korsar. OBS fungerar enbart för rektanglar 
-	public boolean intersect(Collision other)
+	public Boolean intersect(Collision other)
 	{
 		if (other.getWidth() + other.getXLocation() < this.getXLocation())
 		{
@@ -43,6 +43,8 @@ public class Ball extends Ellipse implements Mover, Collision {
 		}
 		return true;
 	}
+	
+		
 	
 	public void move() {
 		
