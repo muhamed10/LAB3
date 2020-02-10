@@ -3,8 +3,8 @@ package LAB3;
 import wheels.users.Rectangle;
 
 public class Brick extends Rectangle implements Collision {
-	public static final int WIDTH = 50;
-	public static final int HEIGHT = 25;
+	public static final int WIDTH = 200;
+	public static final int HEIGHT = 20;
 	
 	public int getWidth()
 	{
@@ -16,8 +16,9 @@ public class Brick extends Rectangle implements Collision {
 	}
 	
 	//Returnerar true ifall den korsar. OBS fungerar enbart för rektanglar 
-	public Boolean intersect(Collision other)
+	public Direction intersect(Collision other)
 	{
+		/*
 		if (other.getWidth() + other.getXLocation() < this.getXLocation())
 		{
 			return false;
@@ -36,6 +37,8 @@ public class Brick extends Rectangle implements Collision {
 		}
 		
 		return true;
+		*/
+		return Direction.None;
 	}
 	
 	

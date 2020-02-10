@@ -7,5 +7,4 @@ public interface Collision {
 	public int getXLocation();
 	public int getYLocation();
 	
-	public Boolean intersect(Collision c);
 }
